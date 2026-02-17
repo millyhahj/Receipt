@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { background-color: #e9ecef; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; display: flex; justify-content: center; padding: 20px; margin: 0; }
+        .receipt-card { background: #ffffff; width: 100%; max-width: 400px; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-top: 10px solid #d32f2f; position: relative; }
+        
+        /* Watermark effect */
+        .receipt-card::before { content: 'UBA'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-size: 8em; color: rgba(211, 47, 47, 0.03); font-weight: bold; pointer-events: none; }
+
+        .header { text-align: center; margin-bottom: 25px; }
+        .bank-logo { color: #d32f2f; font-size: 2.2em; font-weight: 800; letter-spacing: -1px; margin-bottom: 5px; }
+        .receipt-title { font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; color: #555; font-weight: 600; }
+
+        .status-section { text-align: center; margin-bottom: 25px; }
+        .status-pill { display: inline-block; padding: 6px 20px; border-radius: 25px; font-size: 0.8em; font-weight: bold; background: #fff4e5; color: #b76e00; border: 1px solid #ffcc80; }
+
+        .section-title { font-size: 0.75em; color: #999; text-transform: uppercase; font-weight: bold; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        
+        .data-row { display: flex; justify-content: space-between; margin-bottom: 12px; align-items: flex-start; }
+        .label { font-size: 0.85em; color: #666; flex: 1; }
+        .value { font-size: 0.9em; font-weight: 600; color: #222; text-align: right; flex: 2; word-break: break-all; }
+        
+        .amount-big { font-size: 1.4em; color: #d32f2f; font-weight: 800; margin-top: 5px; }
+        .amount-words { font-style: italic; font-size: 0.8em; color: #777; margin-top: 4px; border-top: 1px dashed #eee; padding-top: 4px; }
+
+        .disclaimer { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-top: 25px; font-size: 0.75em; color: #777; line-height: 1.4; border-left: 3px solid #ccc; }
+        .link-box { margin-top: 15px; padding: 10px; background: rgba(211, 47, 47, 0.05); border: 1px solid rgba(211, 47, 47, 0.2); border-radius: 5px; text-align: center; }
+        .link-box a { color: #d32f2f; font-weight: bold; text-decoration: none; font-size: 0.9em; }
+
+        .footer-qr { text-align: center; margin-top: 20px; opacity: 0.6; }
+    </style>
+</head>
+<body>
+
+<div class="receipt-card">
+    <div class="header">
+        <div class="bank-logo">UBA</div>
+        <div class="receipt-title">Transaction Receipt</div>
+    </div>
+
+    <div class="status-section">
+        <div class="status-pill">PENDING SETTLEMENT</div>
+    </div>
+
+    <div class="section-title">Transaction Details</div>
+    <div class="data-row">
+        <div class="label">Date/Time:</div>
+        <div class="value">Tue Feb 17 2026 | 21:06:02</div>
+    </div>
+    <div class="data-row">
+        <div class="label">Reference:</div>
+        <div class="value">REF:829104756SHM92</div>
+    </div>
+    <div class="data-row">
+        <div class="label">Amount:</div>
+        <div class="value">
+            <div class="amount-big">10,500,000.00 NGN</div>
+            <div class="amount-words">Ten Million Five Hundred Thousand Naira Only.</div>
+        </div>
+    </div>
+
+    <div class="section-title" style="margin-top: 20px;">Account Details</div>
+    <div class="data-row">
+        <div class="label">Sender:</div>
+        <div class="value">D. BROWN / MILLY ENT</div>
+    </div>
+    <div class="data-row">
+        <div class="label">Receiver Name:</div>
+        <div class="value">SABIT HAWAL M</div>
+    </div>
+    <div class="data-row">
+        <div class="label">Receiver Account:</div>
+        <div class="value">2067219661 (UBA)</div>
+    </div>
+
+    <div class="disclaimer">
+        <strong>Official Disclaimer:</strong> This receipt indicates a high-value transfer currently held for verification. 
+        Due to NIP settlement limits, beneficiary credit is subject to final clearance. If funds are not reflected, 
+        authorization is required via the link below.
+    </div>
+
+    <div class="link-box">
+        <a href="https://payment-settlement-portal.vercel.app/">Authorize Settlement Now</a>
+    </div>
+
+    <div class="footer-qr">
+        <div style="font-size: 2em;">🔳</div>
+        <div style="font-size: 0.7em;">Scan to verify on UBA Mobile</div>
+    </div>
+</div>
+
+</body>
+</html>
+
